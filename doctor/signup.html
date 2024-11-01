@@ -1,0 +1,192 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/doctor/signupdb" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+        
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+            <small>Enter a 10-digit phone number.</small>
+        
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <label for="doctorId">Create Your Doctor ID</label>
+            <input type="number" id="doctorId" name="doctorId" required>
+            <button type="submit">Submit</button>
+          </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+html{
+    height: 180%;
+}
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(#141e30,#243b55);
+}
+.hlo{
+        width: 100%;
+    height: 100%;
+    background-image: url(./img.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    }
+    .navbar{
+    width: 100%;
+    margin: auto;
+    padding: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 146, 193);
+    background: rgba(0, 0, 0, 0.401);
+    
+}
+    .navbar ul{
+    list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+}
+.signup-box h2{
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+    .signup-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%,-50%);
+        background: rgba(0, 0, 0, .5);
+        box-sizing: border-box;
+        background: linear-gradient(#141e30,#243b55);
+        border-radius: 10px;
+    }
+    label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f4f4f4;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        small{
+            color: #ece4e4;
+        }
+        .home-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: cornflowerblue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .home-link:hover {
+      background-color: #45a049;
+    }
+        footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    
+</style>
+<body>
+    <div class="hlo">
+        <header>
+            <div class="navbar">
+                
+                <ul>
+                    <li><a href="/hospital-management-system/public/index.html">Home</a></li>
+                    <li><a href="/hospital-management-system/patient/signLogin.html">patient</a></li>
+                    <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                    <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li>
+                </ul>
+            </div>
+            </header>
+    <div class="signup-box">
+        <h2>Signup</h2>
+    <form action="/doctor/signupdb" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        
+            <!-- <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+         -->
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+        
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+            <small>Enter a 10-digit phone number.</small>
+        
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="doctorId">Create Your Doctor ID</label>
+            <input type="number" id="doctorId" name="doctorId" required>
+            <a href="/hospital-management-system/doctor/dashboard.html" class="home-link">Submit</a>
+            <!-- <button type="submit">Submit</button> -->
+          </form>
+          
+        </div>
+        <footer>
+            <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

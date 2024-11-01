@@ -1,0 +1,211 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>your appointment is succesfully regestered can come and meet the doctor at given time.</h1>
+    <form action="/">
+        <button type="submit">HOME</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url(./doctor-appointment.jpg); /* Replace 'background-image.jpg' with the path to your image */
+      background-size: cover;
+      background-position: center;
+      justify-content: center;
+      display: flex;
+      color: #fff;
+    }
+    .banner {
+      width: 100%;
+      height: 100%;
+      background-image: url(./doctor-appointment.jpg);
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+    }
+    .navbar {
+      width: 100%;
+      margin: auto;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(35, 146, 193);
+      background: rgba(0, 0, 0, 0.401);
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+    .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: aqua;
+      font-weight: bold;
+    }
+
+    h1 {
+      color: black;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .success-icon {
+      margin-top: 200px;
+      color: #4caf50;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .home-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .home-link:hover {
+      background-color: #45a049;
+    }
+
+    .navbar {
+      width: 100%;
+      margin: auto;
+      display: inline-block;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(35, 146, 193);
+      background: rgba(0, 0, 0, 0.401);
+      text-align: right;
+    }
+
+
+    header {
+      color: rgb(8, 117, 184);
+      display: flex;
+      width: 100%;
+      position: relative;
+      height: 50px;
+      border: 2px solid black;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: right;
+      list-style: none;
+    }
+
+    .icon img {
+      width: 45px;
+      height: auto;
+      margin-right: 1460px;
+      margin-top: -5px;
+      display: inline;
+      text-align: left;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      z-index: 1000;
+    }
+
+    .banner .navbar ul li form button {
+      color: aqua;
+    }
+  </style>
+  <body>
+    <div class="banner">
+      <header>
+        <div class="icon">
+          <img
+            style="
+              position: absolute;
+              top: 20px;
+              left: 3vw;
+              border-radius: 100%;
+            "
+            src="../public/logo.jpg"
+            alt="Hospital Icon"
+          />
+        </div>
+        <div style="position: absolute; color: black; top: 3px; left: 8vw">
+          <h2>MEDICOS</h2>
+        </div>
+        <div class="navbar">
+          <ul>
+            <!-- <li><a href="../hospital-management-system/public/index.html">Home</a></li> -->
+            <li>
+              <form action="/patient" method="post">
+                <button type="submit">Patient</button>
+              </form>
+            </li>
+            <li>
+              <form action="/doctor" method="post">
+                <button type="submit">Docter</button>
+              </form>
+            </li>
+            <li>
+              <form action="/viewAppointments" method="post">
+                <button type="submit">Appointment</button>
+              </form>
+            </li>
+            <li>
+              <form action="/generateReport" method="post">
+                <button type="submit">Report</button>
+              </form>
+            </li>
+            <!-- <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                    <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li> -->
+          </ul>
+        </div>
+      </header>
+      <div class="success-icon">&#10004;</div>
+      <h1>Appointment Successful!</h1>
+      <p>Your appointment has been successfully scheduled.</p>
+      <form action="/">
+        <a
+          href="/hospital-management-system/public/index.html"
+          class="home-link"
+          >Go to Homepage</a
+        >
+      </form>
+
+      <!-- <h1>your appointment is succesfully regestered can come and meet the doctor at given time.</h1>
+    <form action="/">
+        <button type="submit">HOME</button>
+    </form> -->
+    </div>
+  </body>
+</html>

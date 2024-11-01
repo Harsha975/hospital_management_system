@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  color: aqua;
+  background: rgb(236, 233, 233);
+  justify-content: center;
+  font-family: sans-serif;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 30%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  margin: auto;
+  height: 80px;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(35, 146, 193);
+  background: rgba(0, 0, 0, 0.401);
+  text-align: right;
+}
+
+img {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  height: 35px;
+}
+
+header {
+  /* background-color: #333; */
+  color: rgb(8, 117, 184);
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 80px;
+  padding: 0px;
+
+
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+}
+
+.navbar ul li {
+  font-size: 1.2em;
+  color: #67d1e9;
+  cursor: pointer;
+  margin: 15px; 
+  padding: 5px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: aqua;
+  font-weight: bold;
+
+  text-decoration: none;
+  /* padding: 10px; */
+  /* margin: 0 10px; */
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, .5);
+  box-sizing: border-box;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+  height: 30%;
+  margin-top: -150px;
+}
+
+.icon img {
+  width: 45px;
+  /* Set the width of your image */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 1460px;
+  margin-top: -5px;
+  display: inline;
+  text-align: left;
+  /* Add some spacing to the right of the image */
+}
+
+.balls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 240px;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 5px 20px;
+  /* background-color: cornflowerblue; */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 20px;
+
+
+}
+
+
+
+.circle-outer {
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  /* Adjust margin as needed */
+}
+
+.circle {
+  /* z-index: -1; */
+  background: linear-gradient(#0097d1 0%, #00a2b3 10%, #00536c 50%, #004040 100%);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: aliceblue;
+}
+
+.circle a h3 {
+  /* z-index: -1; */
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  z-index: 1;
+}
+
+.circle:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 75px;
+  /* Adjust size as needed */
+  height: 75px;
+  /* Adjust size as needed */
+  background: linear-gradient(#67d1e9 10%, #006a7b 50%, #00404e 100%);
+  border-radius: 50%;
+  filter: blur(15px);
+  transform: rotateZ(385deg);
+}
+
+.circle:after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.420);
+  border-radius: 50%;
+  bottom: -50%;
+  filter: blur(15px);
+}
+
+.circle:hover::before {
+  /* z-index: 1; */
+  transform: rotateZ(526deg);
+}
+
+.circle-link {
+  z-index: 1;
+  text-decoration: none;
+  /* Remove default link underline */
+  cursor: pointer;
+  /* Add pointer cursor to indicate the link is clickable */
+  color: inherit;
+  /* Inherit text color from parent */
+}
+
+.button-link {
+
+  padding: 10px 20px;
+  /*Adjust padding as needed */
+  background-color: #4CAF50;
+  /* Set link background color */
+  color: white;
+  /* Set link text color */
+  text-decoration: none;
+  /* Remove default link underline */
+  border-radius: 5px;
+  /* Add border radius for rounded corners */
+  cursor: pointer;
+  /* Add pointer cursor on hover */
+  display: inline-block;
+  /* Ensure the link behaves like a block element */
+}
+
+.button-link:hover {
+  background-color: #45a049;
+  /* Change background color on hover */
+}
+
+button i {
+  margin-right: 5px;
+  /* Adjust spacing between text and icon */
+}
+
+button img {
+  max-width: 20px;
+  /* Set the maximum width of the image */
+  vertical-align: middle;
+  /* Align the image vertically in the middle */
+  margin-right: 5px;
+  /* Adjust spacing between icon and image */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.main {
+  max-width: 75rem;
+  padding: 4em 1.5em;
+}
+
+.main-heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+
+}
+
+.heading {
+  font-size: 50px;
+  margin-top: -5px;
+  font-family: sans-serif;
+
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.banner .navbar ul li form button{
+  color: aqua;
+}

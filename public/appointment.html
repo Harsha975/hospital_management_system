@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Appointments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    
+    .navbar{
+    width: 100%;
+    margin: auto;
+    padding: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 146, 193);
+    background: rgba(0, 0, 0, 0.401);
+    
+}
+    .navbar ul{
+    list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+}
+    .banner{
+        width: 100%;
+    height: 100%;
+    background-image: url(./ap.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      align-items: center;
+      
+    }
+    .login-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+        background-color: white;
+    }
+    .login-box h1{
+        margin: 0 0 30px;
+        padding: 0;
+        color: #0e0404;
+        text-align: center;
+    }
+    
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 6px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <header>
+      <div class="navbar">
+          
+          <ul>
+              <li><a href="/hospital-management-system/public/index.html">Home</a></li>
+              <li><a href="/hospital-management-system/patient/signLogin.html">patient</a></li>
+              <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+              <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li>
+          </ul>
+          
+      </div>
+      
+      </header>
+<div class="login-box">
+  <h1>Appointments</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Patient ID</th>
+        <th>Doctor ID</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>P001</td>
+        <td>D001</td>
+        <td>2023-11-22</td>
+        <td>10:00 AM</td>
+      </tr>
+      <!-- Add more rows for additional appointments -->
+    </tbody>
+  </table>
+</div>
+<footer>
+  <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+       <header>
+        <div class="icon">
+            <img style="position: absolute;top: 20px;left: 3vw;border-radius: 100%;" src="./logo.jpg" alt="Hospital Icon">
+        </div>
+        <div style="position: absolute;color:black;top: 3px;left: 8vw;"><h2>MEDICOS</h2></div>
+        <div class="navbar">
+            <ul>
+                <!-- <li><a href="../hospital-management-system/public/index.html">Home</a></li> -->
+                <li><form action="/patient" method="post"><button type="submit">Patient</button></form></li>
+                <li><form action="/doctor" method="post"><button type="submit">Docter</button></form></li>
+                <li><form action="/viewAppointments" method="post"><button type="submit">Appointment</button></form></li>
+                <li><form action="/generateReport" method="post"><button type="submit">Report</button></form></li>
+                <!-- <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li> -->
+            </ul>
+        </div>
+        </header>
+        <div class="box">
+            <div class="container">
+                <h1 class="heading">Hospital Management System</h1>
+                <p> <h3 style="color: azure;">Welcome to our Hospital Management System. We are dedicated to providing quality healthcare services.</h3></p>
+                </div>
+            </div>
+            <div class="balls-container">
+                <div class="circle-outer">
+                  <div class="circle">
+                    <form action="/patient" method="post">
+                        <section id="patients">
+                            <button type="submit" class="home-link"><h3>Patient Management</h3></button>
+                    </section>
+                    </form>
+                  </div>
+                </div>
+                <div class="circle-outer">
+                  <div class="circle">
+                    <form action="/doctor" method="post">
+                        <section id="doctors">
+                            <button type="submit" class="home-link"><h3>Doctor Informations</h3>
+                                </button>
+                    </section>
+                    </form>
+                  </div>
+                </div>
+                <div class="circle-outer">
+                  <div class="circle">
+                    <form action="/viewAppointments" method="post">
+                        <section id="appointments">
+                            <button type="submit" class="home-link"><h3>Appointment Scheduling</h3>
+                            </button>
+                    </section>
+                    </form>
+                  </div>
+                </div>
+                <div class="circle-outer">
+                  <div class="circle">
+                    <form action="/generateReport" method="post">
+                        <section id="medical-records">            
+                            <button href="" class="home-link"><h3> Generate Report</h3></button>
+                    </section>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+            <footer>
+                <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+            </footer>
+    </div>
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/patient/signup" method="post">
+        <button type="submit">Signup</button>
+    </form>
+    <form action="/patient/login" method="post">
+        <button type="submit">login</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    color: aqua;
+    background: rgb(236, 233, 233);
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 25px ;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 146, 193);
+    background: rgba(0, 0, 0, 0.401);
+    text-align: right;
+}
+.full{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+}
+    .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    height: 30%;
+    margin-top: -180px;
+}
+
+header {
+    /* background-color: #333; */
+    color: aqua;
+    
+    width: 100%;
+    position: relative;
+    height: 80px;
+    padding: 0px;
+           
+    
+}
+.line{
+    font-size: 80px;
+    font-style: italic;
+    font-family: serif;
+    margin-left: 650px;
+    color: azure;
+    margin-top: 20px;
+}
+.navbar ul{
+    list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+    
+     text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+.th{
+    margin-left: 950px;
+}
+.th button{
+    position: relative;
+    display: inline-block;
+    padding: 0px 40px;
+    margin: 20px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+.th button:hover{
+    background: #03e9f4;
+    color: black;
+    box-shadow: 0 0 5px #03e9f4;
+    
+}
+
+.login-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    background: linear-gradient(#141e30,#243b55);
+    border-radius: 10px;
+}.home-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(#141e30,#243b55);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .home-link:hover {
+      background-color: #45a049;
+    }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+button{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+}
+</style>
+<body>
+    <div class="full">
+        <header>
+            <div class="navbar">
+                
+                <ul>
+                    <li><a href="/hospital-management-system/public/index.html">Home</a></li>
+                    <li><a href="/hospital-management-system/patient/signLogin.html">patient</a></li>
+                    <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                    <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li>
+                </ul>
+            </div>
+            </header>
+    
+       <p class="line">Get Better Care of Your Health</p>
+      
+       <div class="th">
+        <form action="/patient/signup" method="post">
+            <section id="patients">
+                <button type="submit" class="home-link"><h3>signup</h3></button>
+        </section>
+        </form>
+       <!-- <a href="/hospital-management-system/patient/signup.html" class="home-link">signup</a> -->
+       <form action="/patient/login" method="post">
+        <section id="patients">
+            <button type="submit" class="home-link"><h3>login</h3></button>
+    </section>
+    </form>
+    
+       <!-- <a href="/hospital-management-system/patient/login.html" class="home-link">login</a> -->
+       
+    </div>
+
+
+    </form>
+    <footer>
+    <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+</footer>
+    </div>
+</body>
+</html>

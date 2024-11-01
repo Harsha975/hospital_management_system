@@ -1,0 +1,244 @@
+<!-- views/report.ejs -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+</head>
+<body>
+  <h1>Report</h1>
+
+  <h2>Patients</h2>
+  <ul>
+    <% patients.forEach(patient => { %>
+      <li><%= patient.firstName %></li>
+    <% }); %>
+  </ul>
+
+  <h2>Doctors</h2>
+  <ul>
+    <% doctors.forEach(doctor => { %>
+      <li><%= doctor.firstName %></li>
+    <% }); %>
+  </ul>
+
+  <h2>Appointments</h2>
+  <ul>
+    <% appointments.forEach(appointment => { %>
+      <li><%= appointment.appointmentDate %></li>
+    <% }); %>
+  </ul>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System Report</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .navbar{
+    width: 100%;
+    margin: auto;
+    padding: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 146, 193);
+    background: rgba(0, 0, 0, 0.401);  
+}
+    .navbar ul{
+    list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+}
+.banner{
+        width: 100%;
+    height: 100%;
+    background-image: url(./ap.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .section {
+      margin-top: 30px;
+      margin-left: 120px;
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      align-items: center;
+      
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: cornflowerblue;
+      color: white;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    .hlo h1{
+        color: white;
+        text-align: center;
+    }
+    .hlo h2{
+        color: white;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-left: 120px;
+    }
+
+    .back-link:hover {
+      background-color: #45a049;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <div class="navbar">
+                
+                <ul>
+                    <li><a href="/hospital-management-system/public/index.html">Home</a></li>
+                    <li><a href="/hospital-management-system/patient/signLogin.html">patient</a></li>
+                    <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                    <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li>
+                </ul>
+                
+            </div>
+            
+            </header>
+<div class="hlo">
+  <h1>Hospital Management System Report</h1>
+
+  <div class="section">
+    <h2>Patient Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>DOB</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><%= patients[0].firstName %></th>
+          <th><%= patients[0].patientID %></th>
+          <th><%= patients[0].dateOfBirth %></th>
+          <th><%= patients[0].gender %></th>
+        </tr>
+        <!-- Add more rows for additional patients -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Doctor Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Specialty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= doctors[0].firstName %></td>
+          <td><%= doctors[0].doctorId %></td>
+          <td><%= doctors[0].specialization %></td>
+        </tr>
+        <!-- Add more rows for additional doctors -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Appointments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Doctor Name</th>
+          <th>Date and Time</th>
+          <!-- <th>Time</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <td>John Doe</td> -->
+          <td><%= patients[0].firstName %></td>
+          <td><%= doctors[0].firstName %></td>
+          <!-- <td><%= appointments[0].patientID  %></td> -->
+          <td><%= appointments[0].appointmentDate  %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<form action="/">
+  <button type="submit"  class="back-link">Go Back</button>
+</form>
+  <!-- <a href="/hospital-management-system/public/index.html" class="back-link">Go Back</a> -->
+</div>
+  <footer>
+    <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
+

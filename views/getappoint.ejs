@@ -1,0 +1,372 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Make Appointment</h1>
+
+    <form action="/appointment/appointdb" method="post">
+      <label for="patientId">Patient ID:</label>
+      <input type="number" id="patientId" name="patientId" required>
+  
+      <label for="doctorId">Doctor ID:</label>
+      <input type="number" id="doctorId" name="doctorId" required>
+  
+      <label for="appointmentDate">Appointment Date:</label>
+      <input type="datetime-local" id="appointmentDate" name="appointmentDate" required>
+  
+      <button type="submit">Submit Appointment</button>
+    </form>
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  html{
+    
+    position: relative;
+  }
+    
+  
+ body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    color: aqua;
+    background: rgb(236, 233, 233);
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+    
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 146, 193);
+    background: rgba(0, 0, 0, 0.401);
+    
+}
+    .navbar ul{
+    list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    background-image: url(./doctor-appointment.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+}
+.inner-layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(83, 204, 234, 0.9); */
+  overflow: auto;
+}
+.form-body{
+  padding: 20px;
+}
+.form-head{
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.form-head h2{
+font-size: 22px;
+font-weight: 600;
+}
+.no-margin{
+  margin: 0px;
+}
+.form-data{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%,-50%);
+        background: rgba(0, 0, 0, .5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+        margin-top: -80px;
+        margin-left: 420px;
+    }
+    
+    .form-data h2{
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+    label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f4f4f4;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .content{
+          margin-top: 100px;
+          margin-left: 100px;
+          font-style: italic;
+          color: cornflowerblue;
+          font-size: larger;
+        }
+        .home-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: cornflowerblue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .home-link:hover {
+      background-color: #45a049;
+    }
+        footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    color: #fff;
+}
+    .banner {
+      width: 100%;
+      height: 100%;
+      background-image: url(./doctor-appointment.jpg);
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+    }
+    .navbar {
+      width: 100%;
+      margin: auto;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(35, 146, 193);
+      background: rgba(0, 0, 0, 0.401);
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+    .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: aqua;
+      font-weight: bold;
+    }
+
+    h1 {
+      color: black;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .success-icon {
+      margin-top: 200px;
+      color: #4caf50;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .home-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .home-link:hover {
+      background-color: #45a049;
+    }
+
+    .navbar {
+      width: 100%;
+      margin: auto;
+      display: inline-block;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(35, 146, 193);
+      background: rgba(0, 0, 0, 0.401);
+      text-align: right;
+    }
+
+
+    header {
+      color: rgb(8, 117, 184);
+      display: flex;
+      width: 100%;
+      position: relative;
+      height: 50px; 
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: right;
+      list-style: none;
+    }
+
+    .icon img {
+      width: 45px;
+      height: auto;
+      margin-right: 1460px;
+      margin-top: -5px;
+      display: inline;
+      text-align: left;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      z-index: 1000;
+    }
+
+    .banner .navbar ul li form button {
+      color: aqua;
+    }
+
+</style>
+<body>
+  <div class="banner">
+    <header>
+      <div class="icon">
+        <img
+          style="
+            position: absolute;
+            top: 20px;
+            left: 3vw;
+            border-radius: 100%;
+          "
+          src="../public/logo.jpg"
+          alt="Hospital Icon"
+        />
+      </div>
+      <div style="position: absolute; color: black; top: 3px; left: 8vw">
+        <h2>MEDICOS</h2>
+      </div>
+      <div class="navbar">
+        <ul>
+          <!-- <li><a href="../hospital-management-system/public/index.html">Home</a></li> -->
+          <li>
+            <form action="/patient" method="post">
+              <button type="submit">Patient</button>
+            </form>
+          </li>
+          <li>
+            <form action="/doctor" method="post">
+              <button type="submit">Docter</button>
+            </form>
+          </li>
+          <li>
+            <form action="/viewAppointments" method="post">
+              <button type="submit">Appointment</button>
+            </form>
+          </li>
+          <li>
+            <form action="/generateReport" method="post">
+              <button type="submit">Report</button>
+            </form>
+          </li>
+          <!-- <li><a href="/hospital-management-system/doctor/signLogin.html">Doctor</a></li>
+                  <li><a href="/hospital-management-system/appointment/getappoint.html">Appointment</a></li> -->
+        </ul>
+      </div>
+    </header>
+    <div class="inner-layer">
+      <div class="container">
+      <div class="row no-margin">
+        <div class="col-sm-7">
+        <div class="content">
+          <h1>Book Your slot now and save your time</h1>
+          <p><ul><li>Set up timings without any hurdle</li><br>
+            <li>Manage patient appointments with IVR, app or online</li><br>
+           <li> Handle the queue in a waiting room instantly</li>
+          </ul></p>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="form-data">
+          <h2>Book Appointment</h2>
+          <form action="/appointment/appointdb" method="post">
+            <label for="patientId">Patient ID:</label>
+            <input type="number" id="patientId" name="patientId" required>
+            <label for="doctorId">Doctor ID:</label>
+      <input type="number" id="doctorId" name="doctorId" required>
+  
+      <label for="appointmentDate">Appointment Date:</label>
+      <input type="datetime-local" id="appointmentDate" name="appointmentDate" required>
+      <a href="/hospital-management-system/appointment/done_appoint.html" class="home-link">Submit Appointment</a>
+      <!-- <button type="submit">Submit Appointment</button> -->
+          </form>
+      
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+  </footer>
+
+  </div>
+  
+</body>
+</html>
